@@ -87,6 +87,178 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* 
+Step 1: Start out by organising the headings as seen below. 
+Step 2: Add sections that are necessary to incorporate FlexBox do not worry about 
+the other CSS properties yet, just make sure to organise the big boxes. 
+Looking at the HTML- Example: Header,footer | header .content-wrapper | header nav |
+headver nav ul | footer .social-icons| footer .social-icons p | hero | aside | features |
+reviews | Then move onto the about page and include .mission | .contact-section | 
+Then move onto the FAQ page and do .faq and faq .content-wrapper */
+
+
+/*---------- BASE HEADER - FOOTER STYLES -----*/
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+/* HEADER STYLES */
+
+header .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+/*FOOTER*/
+
+footer .social {
+
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/*---------- MOBILE STYLES - HOMEPAGE -----*/
+
+
+/*  HERO AREA  */
+
+.hero-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+/*  ASIDE  */
+
+aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+}
+
+/*  FEATURES */
+
+.features {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.features .features-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;  
+}
+
+
+/*  REVIEWS  */
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+
+}
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+.mission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.contact-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+/* ==========================================================================
+   FAQ Page
+   ========================================================================== */
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.faq .content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
