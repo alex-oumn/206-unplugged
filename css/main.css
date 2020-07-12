@@ -94,7 +94,29 @@ the other CSS properties yet, just make sure to organise the big boxes.
 Looking at the HTML- Example: Header,footer | header .content-wrapper | header nav |
 headver nav ul | footer .social-icons| footer .social-icons p | hero | aside | features |
 reviews | Then move onto the about page and include .mission | .contact-section | 
-Then move onto the FAQ page and do .faq and faq .content-wrapper */
+Then move onto the FAQ page and do .faq and faq .content-wrapper 
+Step 3: Format your mobile layout: Find and set your width percentages using photoshop|
+Then set margins and padding in pixels- don't worry too much about precision this is a rough sketch
+of what it should look like- you will continue to edit when you insert fonts images etc. |
+Override browser default margins- set margin to 0 to any paragraphs that don't already have classes assigned to them
+Step 4: Add breakpoints and write code for tablets: FIRST do the widths | SECOND add padding and flexbox properties |
+THIRD add flex-basis to css elements | THEN write the other pages for tablet
+Step 5: add your desktop layout style 
+Step 6: Implement your text styles! Start with general styles used everywhere and add your webfonts to HTML as well
+Add html font-size 16px and then the body font-size 1em then add the rest by em 
+Add list-style-type, line-height and font-style to address
+Step 7: add all remaining styles including: color, font-weight, background-color, font-size,
+text-transform, text-align, list-style-type, line-height, text-decoration 
+Step 8: continue refining your code 
+Step 9: Responsive images: need to make sure the images are the right resolution or pixel ratio. 
+Open it in photoshop. Image file should be as small as possible without degrading the quality of the image. 
+You'll change your image resolution to exactly 72px per inch (PPI) because that's the number of pixels per inch most displays can show. 
+Then you will export your properly formatted, perfectly-sized 72 PPI photos for the web. (Check: adjust your images in photoshop for tutorial)
+Then you will code all web-friendly images to be fully responsive including:
+Top hero image, logo images, about page images, any other photographs or images for your site (not including icons- add those later)
+Best to add these images as background images through CSS than through HTML in order to make them responsive. 
+
+*/
 
 
 
@@ -108,13 +130,15 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   text-align: left;
-
+  color: #e2e3ed;
 }
 
 ul,
 ol {
   font-size: 1.125em;
   list-style-type: none;
+  font-weight: 700;
+  text-transform: uppercase;
 
 }
 
@@ -124,14 +148,10 @@ a {
 
 }
 
-h1 {
-  font-size: 2.25em;
-}
-
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
-  line-height: 30px;
+  font-weight: 500;
 }
 
 
@@ -139,22 +159,16 @@ h3,
 h4 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.125em;
+  font-weight: 500;
   margin: 20px 0;
 
 }
 
 p {
   font-size: 0.875em;
-  line-height: 18px;
+  line-height: 1.285;
 }
 
-img {
-
-}
-
-figure {
-
-}
 
 address {
   font-style: normal;
@@ -162,10 +176,8 @@ address {
 }
 
 .content-wrapper {
-
   width: 90%;
   margin: 50px 0;
-
 }
 
 
@@ -174,6 +186,7 @@ address {
 
 header,
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,6 +210,7 @@ header .content-wrapper {
 }
 
 .header-divider {
+  background: #3a3a3a;
   width: 100%; 
   height: 1px;
   margin: 10px 0 20px 0;
@@ -209,6 +223,7 @@ header nav {
   align-items: center;
   flex-flow: row wrap;
   width: 60%;
+  
 }
 
 header nav ul {
@@ -222,6 +237,7 @@ header nav ul {
 footer {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 footer p {
@@ -268,6 +284,12 @@ footer .copyright {
 }
 
 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.2;
+}
 
 /*  ASIDE  */
 
@@ -276,14 +298,41 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-
+  background-color: #527158;
 }
+
+/* aside button code */
+
+   aside .form {
+    margin-top: 30px;
+  }
+   
+  input[type=text] {
+    box-sizing: border-box;
+    width: 100%;
+    color: #2a423a;
+    font-style: italic;
+    padding: 1em;
+  }
+   
+  input[type=button] {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    background-color: #2a423a;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.125em;
+    color: #e2e3ed;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
 
 /*  FEATURES */
 
 .features {
-
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -307,6 +356,7 @@ aside {
 
 .features p {
   margin: 0;
+  text-align: center;
 }
 
 
@@ -315,12 +365,13 @@ aside {
 .reviews {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 
 .reviews h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 .reviews h3 {
   width: 55%;
@@ -370,6 +421,7 @@ aside {
 
 .faq h2{
   margin-bottom: 40px;
+  line-height: 1;
 
 }
 
@@ -377,16 +429,9 @@ aside {
   margin-bottom: 50px;
 }
 
-
-
-
-
-
-
-
-
-
-
+.faq-content h3 {
+  line-height: 1.333;;
+}
 
 
 
@@ -500,6 +545,16 @@ aside {
     margin: 100px 0;
   }
 
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+}
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+}
+
   /* HEADER */
   header {
     justify-content: space-around;
@@ -509,6 +564,10 @@ aside {
   header .content-wrapper {
     width: 100%;
     justify-content: space-between;
+  }
+
+  header figure {
+    width: 30%;
   }
 
   header nav {
@@ -526,6 +585,12 @@ aside {
 
   /* HERO AREA*/
 
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+}
+
   /* ASIDE */
   aside .content-wrapper {
     margin: 50px 0;
@@ -541,6 +606,10 @@ aside {
   }
 
   /* FEATURES */
+  .features h2 {
+    margin-bottom: 20px;
+  }
+  
   .features article {
     display: flex;
     justify-content: center;
@@ -551,7 +620,7 @@ aside {
   }
 
   .features .features-item-description {
-    width: 50%;
+    width: 62%;
   }
 
   /* REVIEWS */
@@ -560,9 +629,18 @@ aside {
     justify-content: space-between;
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
   .reviews article div {
     width: 49%;
   }
+
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+}
 
   /* FOOTER */
   footer .content-wrapper {
@@ -579,6 +657,16 @@ aside {
   footer .contact {
     margin-bottom: 0;
   }
+
+  footer h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+      line-height: 1.285;
+  }
+
 
   footer .copyright {
     width: 100%;
@@ -611,6 +699,10 @@ aside {
     align-items: flex-start ;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
+
 /* ==========================================================================
    FAQ Page
    ========================================================================== */
@@ -628,18 +720,44 @@ aside {
     width: 100%;
   }
 
+  .faq h4,
+  .faq p {
+      font-size: .875em;
+      line-height: 1.125;
+  }
+
 }
 
 @media only screen and (min-width: 1200px) {
   /* DESKTOP STYLES HERE */
 
+
+  header {
+    padding: 15px 0;
+  }
+
   .content-wrapper {
     max-width: 960px;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3,
+  h4 {
+      font-size: 1.875em;
+  }
+
+  p {
+      font-size: 1.125em;
+      line-height: 1.333;
   }
 
   /* HERO */
   .hero-area h1 {
     width: 60%;
+    font-size: 3.75em;
   }
 
   /* ASIDE */
@@ -652,6 +770,10 @@ aside {
     width: 30% ;
   }
 
+  .form-description p {
+    font-size: 1.125em;
+  }
+
   /* FEATURES */
   .features h2 {
     width: 90%;
@@ -662,10 +784,18 @@ aside {
   }
 
   /* REVIEWS */
+  
+  .reviews h2 {
+    padding-bottom: 50px; 
+  }
+
   .reviews article div {
     width: 42%;
   }
 
+  footer h4 {
+    font-size: 1.875em;
+  }
 
   /* ==========================================================================
    ABOUT Page
@@ -674,8 +804,12 @@ aside {
     .mission h2,
     .contact-section .content-wrapper h2 {
       width: 95%;
+      font-size: 3em;
     }
 
+    .contact-content h4 {
+      font-size: 1.875em;
+    }
 
 /* ==========================================================================
    FAQ Page
@@ -683,6 +817,13 @@ aside {
 
    .faq h2 {
      width: 100%;
+     font-size: 3em;
+   }
+
+   .faq h4,
+   .faq p {
+       font-size: 1.125em;
+       line-height: 1;
    }
 
 }
