@@ -114,7 +114,8 @@ You'll change your image resolution to exactly 72px per inch (PPI) because that'
 Then you will export your properly formatted, perfectly-sized 72 PPI photos for the web. (Check: adjust your images in photoshop for tutorial)
 Then you will code all web-friendly images to be fully responsive including:
 Top hero image, logo images, about page images, any other photographs or images for your site (not including icons- add those later)
-Best to add these images as background images through CSS than through HTML in order to make them responsive. 
+Best to add the huge background images like hero through css. For all SMALLER images wrap them in <figure> in HTML this tells the browser that 
+this box contains media
 
 */
 
@@ -169,6 +170,14 @@ p {
   line-height: 1.285;
 }
 
+img {
+  width: 100%;
+}
+figure {
+  margin: 0; 
+}
+
+/* these are to make sure that the image takes up 100% of the figure element*/
 
 address {
   font-style: normal;
@@ -281,6 +290,9 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background: url('../img/hero.jpg') center no-repeat #333;
+  background-size: cover;
+  align-items: center;
 }
 
 
