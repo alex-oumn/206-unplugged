@@ -423,6 +423,35 @@ aside {
     margin: 0;
   }
 
+/** MAP **/
+  .map figure {
+    width: 100%;
+    height: 0; 
+    padding-bottom: 125%; 
+    overflow: hidden;
+    position: relative;
+}
+ 
+.map iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+}
+/*About the map functions: 
+position:relative means that it will allow us to set the iframe to position:absolute
+padding-bottom: % this is the reason- it is anot actually about padding it is setting the relationship between the height and the width of the map 
+ ex: the maps aspect ratio- when you copy your iframe code it has a set height and width with a ratio of 4:3 so by setting the padding bottom of the percentage 
+ for example if you want to have a square you should set the padding bottom to 100%
+ The height is set to 0 as it has already been determined
+ The width resizes based on browser width. 
+ overflow:hidden - determines whether the child element can exceed parent element's width and height in this case we do not want our map to go outside the map container
+ Position: absolute - makes sure that the iframe shows up even if the height of the map container is 0 
+ if you want it to fill up the whole div it will be all the way top so its top:0 and all the way to the left left:0 
+ and a 100% because you want it to fill out a 100%
+ */
+
 /* ==========================================================================
    FAQ Page
    ========================================================================== */
