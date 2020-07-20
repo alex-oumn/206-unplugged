@@ -87,40 +87,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* 
-Step 1: Start out by organising the headings as seen below. 
-Step 2: Add sections that are necessary to incorporate FlexBox do not worry about 
-the other CSS properties yet, just make sure to organise the big boxes. 
-Looking at the HTML- Example: Header,footer | header .content-wrapper | header nav |
-headver nav ul | footer .social-icons| footer .social-icons p | hero | aside | features |
-reviews | Then move onto the about page and include .mission | .contact-section | 
-Then move onto the FAQ page and do .faq and faq .content-wrapper 
-Step 3: Format your mobile layout: Find and set your width percentages using photoshop|
-Then set margins and padding in pixels- don't worry too much about precision this is a rough sketch
-of what it should look like- you will continue to edit when you insert fonts images etc. |
-Override browser default margins- set margin to 0 to any paragraphs that don't already have classes assigned to them
-Step 4: Add breakpoints and write code for tablets: FIRST do the widths | SECOND add padding and flexbox properties |
-THIRD add flex-basis to css elements | THEN write the other pages for tablet
-Step 5: add your desktop layout style 
-Step 6: Implement your text styles! Start with general styles used everywhere and add your webfonts to HTML as well
-Add html font-size 16px and then the body font-size 1em then add the rest by em 
-Add list-style-type, line-height and font-style to address
-Step 7: add all remaining styles including: color, font-weight, background-color, font-size,
-text-transform, text-align, list-style-type, line-height, text-decoration 
-Step 8: continue refining your code 
-Step 9: Responsive images: need to make sure the images are the right resolution or pixel ratio. 
-Open it in photoshop. Image file should be as small as possible without degrading the quality of the image. 
-You'll change your image resolution to exactly 72px per inch (PPI) because that's the number of pixels per inch most displays can show. 
-Then you will export your properly formatted, perfectly-sized 72 PPI photos for the web. (Check: adjust your images in photoshop for tutorial)
-Then you will code all web-friendly images to be fully responsive including:
-Top hero image, logo images, about page images, any other photographs or images for your site (not including icons- add those later)
-Best to add the huge background images like hero through css. For all SMALLER images wrap them in <figure> in HTML this tells the browser that 
-this box contains media
-
-*/
-
-
-
 /* GENERAL STYLES */
 
 html {
@@ -1003,3 +969,42 @@ For the Desktop Section Add:
   }
 }
 
+
+
+
+/* 
+Step 1: Start out by organising the headings as seen below. 
+Step 2: Add sections that are necessary to incorporate FlexBox do not worry about 
+the other CSS properties yet, just make sure to organise the big boxes. 
+Looking at the HTML- Example: Header,footer | header .content-wrapper | header nav |
+headver nav ul | footer .social-icons| footer .social-icons p | hero | aside | features |
+reviews | Then move onto the about page and include .mission | .contact-section | 
+Then move onto the FAQ page and do .faq and faq .content-wrapper 
+Step 3: Format your mobile layout: Find and set your width percentages using photoshop|
+Then set margins and padding in pixels- don't worry too much about precision this is a rough sketch
+of what it should look like- you will continue to edit when you insert fonts images etc. |
+Override browser default margins- set margin to 0 to any paragraphs that don't already have classes assigned to them
+Step 4: Add breakpoints and write code for tablets: FIRST do the widths | SECOND add padding and flexbox properties |
+THIRD add flex-basis to css elements | THEN write the other pages for tablet
+Step 5: add your desktop layout style 
+Step 6: Implement your text styles! Start with general styles used everywhere and add your webfonts to HTML as well
+Add html font-size 16px and then the body font-size 1em then add the rest by em 
+Add list-style-type, line-height and font-style to address
+Step 7: add all remaining styles including: color, font-weight, background-color, font-size,
+text-transform, text-align, list-style-type, line-height, text-decoration 
+Step 8: continue refining your code 
+Step 9: Responsive images: need to make sure the images are the right resolution or pixel ratio. 
+Open it in photoshop. Image file should be as small as possible without degrading the quality of the image. 
+You'll change your image resolution to exactly 72px per inch (PPI) because that's the number of pixels per inch most displays can show. 
+Then you will export your properly formatted, perfectly-sized 72 PPI photos for the web. (Check: adjust your images in photoshop for tutorial)
+Then you will code all web-friendly images to be fully responsive including:
+Top hero image, logo images, about page images, any other photographs or images for your site (not including icons- add those later)
+Best to add the huge background images like hero through css. For all SMALLER images wrap them in <figure> in HTML this tells the browser that 
+this box contains media
+Step 10: Maps/ iframes / etc. 
+Step 11: icon fonts through font awesome... twitter, facebook, logos etc. 
+Step 12: edit... check browser default styles where you have to place margin 0 in paragraphs and writing. 
+Check DevTools to edit things and see margins and padding through Chrome to place finishing touches 
+
+
+*/
