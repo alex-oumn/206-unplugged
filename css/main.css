@@ -137,6 +137,8 @@ body {
 ul, 
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
  
 a {
@@ -148,6 +150,7 @@ h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
   font-size: 1.875em;
+  margin: 0;
 }
  
 h3, 
@@ -238,6 +241,7 @@ header nav ul {
 
 header nav ul li {
   font-size: 1.125em;
+
 }
 
 /*This is the unplugged logo at the top*/
@@ -258,6 +262,7 @@ footer {
 
 footer p {
   margin: 0;
+
 }
 
 footer .content-wrapper {
@@ -413,6 +418,10 @@ aside {
   margin: 20px 0;
 }
 
+.reviews p {
+  text-align: justify;
+}
+
 /* ==========================================================================
    About Page
    ========================================================================== */
@@ -514,6 +523,10 @@ For the Desktop Section Add:
   
   .faq-content h4 {
     line-height: 1.333;
+  }
+
+  .faq p {
+    text-align: justify;
   }
 
 
@@ -697,6 +710,10 @@ For the Desktop Section Add:
     width: 62%;
   }
 
+  .features i {
+    margin-bottom: 30px;
+  }
+
   /* REVIEWS */
   .reviews article {
     display: flex;
@@ -709,7 +726,8 @@ For the Desktop Section Add:
 
   .reviews article figure,
   .reviews article div {
-    width: 49%;
+    width: 48%;
+
   }
 
   .reviews h3 {
@@ -769,9 +787,6 @@ For the Desktop Section Add:
     width: 80%;
   }
 
-  .contact-section .content-wrapper h2 {
-    width: 80%;
-  }
 
   .contact-content {
     display: flex;
@@ -844,7 +859,7 @@ For the Desktop Section Add:
 
   aside .content-wrapper .form-description, 
   aside .content-wrapper .form {
-    width: 30% ;
+    width: 40% ;
   }
 
   .form-description p {
